@@ -1,0 +1,6 @@
+i cant leave comments in css (im pretty sure) so im just writing out things i will eventually forget to do here - Katie
+
+
+- fix color on login
+  - the login page is working just fixing the colors isnt my highest priority rn
+  

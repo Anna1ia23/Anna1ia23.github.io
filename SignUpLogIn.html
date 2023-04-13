@@ -1,0 +1,90 @@
+<!-- SIGN UP/LOG IN PAGE! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Website Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">WEBSITE</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/Information.html" class="navbar__links">
+                        How It Works
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">
+                        About Us
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/SignUpLogIn.html" class="button">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Login Section -->
+    <div class="login">
+    <div class="login__container">
+    <form class="form" id="login">
+        <h1 class="form__title">Login</h1>
+        <div class="form__message form__message--error"></div>
+        <div class="form__input--group">
+            <input type="text" id="userEmail" class="form__input" autofocus placeholder="Email Address">
+            <div class="form__input-error-message"></div>
+        </div>
+        <div class="form__input--group">
+            <input type="password" class="form__input" autofocus placeholder="Password">
+            <div class="form__input-error-message"></div>
+        </div>
+
+        <button class="form__button" type="submit">Continue</button>
+        <p class="form__text">
+            <a class="form__link" id="linkCreateAccount" >Don't have an account? Sign up!</a>
+        </p>
+    </form>
+    <!-- Sign Up Section -->
+    <form class="form form--hidden" id="createAccount">
+        <h1 class="form__title">Sign Up</h1>
+        <div class="form__message form__message--error"></div>
+        <div class="form__input--group">
+            <input type="text" id="userEmail" class="form__input" autofocus placeholder="Email Address">
+            <div class="form__input-error-message"></div>
+        </div>
+        <div class="form__input--group">
+            <input type="password" class="form__input" autofocus placeholder="Password">
+            <div class="form__input-error-message"></div>
+        </div>
+
+        <button class="form__button" type="submit">Continue</button>
+        <p class="form__text">
+            <a class="form__link" id="linkLogin" >Already have an account? Log In!</a>
+        </p>
+    </form>
+    </div>
+    <script src="/JS_Files/login.js"></script>
+    <script src="/JS_Files/app.js"></script>
+</body>
+</html>
