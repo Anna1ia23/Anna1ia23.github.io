@@ -27,16 +27,6 @@
                         Home
                     </a>
                 </li>
-                <li class="navbar__item">
-                    <a href="/Information.html" class="navbar__links">
-                        How It Works
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">
-                        About Us
-                    </a>
-                </li>
                 <li class="navbar__btn">
                     <a href="/SignUpLogIn.html" class="button">
                         Sign Up
@@ -47,14 +37,26 @@
     </nav>
     <!-- Hero Section -->
     <div class="results">
-        <div class="login__container">
-        <form class="form" id="login">
+        <div class="candidate__container">
+        <form class="candidate__form" id="login">
             <h1 class="form__title">Search Results</h1>
+            <!-- This is the part that will display if an error has occured (e.g. no users found) -->
             <div class="form__message form__message--error"></div>
-            
+            <!-- This is the part that holds candidate information -->
+            <div class="candidate">
+                <div class="candidate__information">
+                    <c class="candidate__name">Name<br><br></c>
+                    <linkTXT class="candidate__instagram" href="/">Instagram</linkTXT>
+                    <linkTXT class="candidate__linkedin" href="/">LinkedIn</linkTXT>
+                    <linkTXT class="candidate__canvas" href="/">Canvas</linkTXT>
+                </div>
+                <div class="candidate__img--container">
+                    <img id="candidate__img" src="images/miscPFP_Image.svg" />
+                </div>
+            </div>
     
             <!-- Fix Later -->
-            <button class="form__button" href="/Search.html" type="submit">Back</button>
+            <button class="candidate__button" href="/Search.html">you</button>
         </form>
     <script src="/JS_Files/app.js"></script>
 </body>
