@@ -2,8 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#SignUpSubmitButton");
     loginForm.addEventListener("submit", e => {
         //store user's searched terms in a const/global variable?
-        var keywords = document.getElementById('searchBarTXT').value;
-        // keywords now holds the string entered by the user -Katie
+        var inputtedSearchTerms = document.getElementById('searchBarTXT').value;
+        // remove the spaces of the string
+        inputtedSearchTerms.replaceAll(' ', '');
+        var keywords = inputtedSearchTerms.split(',');
+        // keywords now holds the an array of strings entered by the user - Katie
 
 
         //check if said terms are in the array here
@@ -23,10 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //if they are, go to results page. if not, idk do something
         if (keywordsFound = true) {
-
             //go to the results page
+            location.href = "/Results.html";
         }
         else {
+            location.href = "/NoResults.html";
             //still send them to the results page and give them nothing? or make an error right here?
         }
     });
