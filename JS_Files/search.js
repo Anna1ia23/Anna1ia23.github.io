@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", e => {
         //store user's searched terms in a const/global variable?
         var keywords = document.getElementById('searchBarTXT').value;
+        // keywords now holds the string entered by the user -Katie
+
 
         //check if said terms are in the array here
         var keywordsFound = false;
