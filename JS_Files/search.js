@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#SignUpSubmitButton");
     loginForm.addEventListener("submit", e => {
         //store user's searched terms in a const/global variable?
-        var keywords; //= getElement? not sure what to use for this
+        var keywords = document.getElementById('searchBarTXT').value;
 
         //check if said terms are in the array here
         var keywordsFound = false;

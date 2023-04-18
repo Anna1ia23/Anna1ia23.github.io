@@ -1,3 +1,4 @@
+
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector(".form__message");
 
@@ -15,8 +16,6 @@ function clearInputError(inputElement){
     inputElement.classList.remove("form__input--error");
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
-
-//setFormMessage(loginForm, "success", "You're Logged in!");
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
@@ -49,31 +48,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
+        let username = document.getElementById('userLogInEmail').value;
+        let password = document.getElementById('userLogInPass').value;
+        // if both username and password are real values (this is only false if they don't enter in data)
+        if (username && password){
 
-        //PREFORM LOGIN VERIFICATION HERE!!! RIGHT HERE!!! :)
-        function Verify() {
-            var username/*=stored string*/;
-            var password/*=stored string*/;
 
-            if (/*username==DB && password==usernamePassword*/)
-            {
-                //signs in
-            }
-            else
-            {
-                //setFormMessage(loginForm, "error", "Incorrect Username or Password"); ??
-            }
 
+        } else {
+            setFormMessage(loginForm, "error", "Please enter a username and password.");
         }
-
-        setFormMessage(loginForm, "error", "Incorrect Username or Password");
+        
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         // when the user clicks off of an input field, this checks if they entered valid input
         inputElement.addEventListener("blur", e=> {
             // maybe check somewhere here that there is an @ symbol in their email
-            if (e.target.id === "userEmail" && e.target.value.length < 0 && e.target.value.length > 64){
+            if ((e.target.id === "userLoginEmail" || e.target.id === "userSignUpEmail") && e.target.value.length < 0 && e.target.value.length > 64){
                 setInputError(inputElement, "Please enter a valid email address.");
             }
         })
@@ -84,3 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 });
+
+
+
