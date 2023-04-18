@@ -51,7 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         //PREFORM LOGIN VERIFICATION HERE!!! RIGHT HERE!!! :)
+        function Verify() {
+            var username/*=stored string*/;
+            var password/*=stored string*/;
 
+            if (/*username==DB && password==usernamePassword*/)
+            {
+                //signs in
+            }
+            else
+            {
+                //setFormMessage(loginForm, "error", "Incorrect Username or Password"); ??
+            }
+
+        }
 
         setFormMessage(loginForm, "error", "Incorrect Username or Password");
     });
