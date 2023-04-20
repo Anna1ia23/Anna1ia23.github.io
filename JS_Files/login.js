@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // when the user clicks off of an input field, this checks if they entered valid input
         inputElement.addEventListener("blur", e=> {
             // maybe check somewhere here that there is an @ symbol in their email
-            if ((e.target.id === "userLoginEmail" || e.target.id === "userSignUpEmail") && e.target.value.length < 0 && e.target.value.length > 64){
+            if ((e.target.id === "userLoginEmail" || e.target.id === "userSignUpEmail") && e.target.value.length <= 0 && e.target.value.length > 64){
                 setInputError(inputElement, "Please enter a valid email address.");
             }
         })
