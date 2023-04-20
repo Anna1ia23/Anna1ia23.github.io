@@ -48,16 +48,14 @@
         <input type="checkbox" id="logInCheckbox" name="logInCheckbox" value="Business" class="form__input">
         <label for="logInCheckbox"> Are you a business?</label><br>
 
-        <button class="form__button" type="submit" onlcick="auth()" >Continue</button>
+        <button class="form__button" type="submit" onclick="auth()" >Continue</button>
         <p class="form__text">
             <a class="form__link" id="linkCreateAccount" >Don't have an account? Sign up!</a>
         </p>
         <script>
-            /* is this needed now that we arent trying the full php/html route now? keeping it in just in case using ajax proves to be a pain.
                function auth() {
                 var email = document.getElementById("userLogInEmail").value;
                 var password = document.getElementById("userLogInPass").value;
-                //need to add something for the checkbox
 
                 //need to check the database...dont know how but will try to find it out
                 if (email == "companyexample" && password == "password123!") {
@@ -69,7 +67,6 @@
                     return;
                 }
             }
-            */
         </script>
     </form>
     <!-- Sign Up Section -->
@@ -88,10 +85,26 @@
         <input type="checkbox" id="signUpCheckbox" name="signUpCheckbox" value="Business" class="form__input">
         <label for="signUpCheckbox"> Are you a business?</label><br>
 
-        <button class="form__button" type="submit">Continue</button>
+        <button class="form__button" type="submit" onclick="input()">Continue</button>
         <p class="form__text">
-            <a class="form__link" id="linkLogin" >Already have an account? Log In!</a>
+            <a class="form__link" id="linkLogin">Already have an account? Log In!</a>
         </p>
+        <script>
+            function input() {
+                var email = document.getElementById("userLogInEmail").value;
+                var password = document.getElementById("userLogInPass").value;
+                //var checkbox = document.getElementById("signUpCheckBox").value; ??
+
+                //send the variables to the DB
+
+                //check if they have an account in the DB
+                //if so, alert and clear the textboxes
+                //if not, save the info in the DB, alert them to the success, then send them to one of the pages
+                window.location.assign("SignUpLogIn.html");
+                alert("Signup Successful ");
+
+            }
+        </script>
     </form>
     </div>
     </div>
