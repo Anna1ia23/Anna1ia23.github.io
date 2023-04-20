@@ -1,0 +1,14 @@
+https://api.instagram.com/oauth/authorize
+  ?client_id=1985337825145461
+  &redirect_uri=http://Anna1ia23.github.io/
+  &scope=user_profile,user_media
+  &response_type=code
+
+
+curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=1985337825145461 \
+  -F client_secret=6ff0e7838ae942e720ff99445b2f9e77 \
+  -F grant_type=authorization_code \
+  -F redirect_uri=http://Anna1ia23.github.io/ \
+  -F code=IGQVJXdU5rZAzdOTGw3LUpGeUI4dzkwMF83ZAVhidzFjLWl2bDJuSTVmbEFMY3ZAMMkttVXhRMEdYeGNIbk5SSTFrRmlPVW9WMFBNdDhqYzBWZADN2cVdLX0ttR01mQUU5WktnS3dndG1MN3kxeVlOZA1VjSwZDZD
