@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         By adding it to the createAccountForm and removing it from loginForm, it toggles between the
         two menus.
         */
-        isOnLoginPage = !isOnLoginPage;
         loginForm.classList.remove("form--hidden");
         createAccountForm.classList.add("form--hidden");
     });
