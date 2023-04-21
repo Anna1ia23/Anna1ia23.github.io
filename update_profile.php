@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo "Profile Successfully Updated!";
 
-    //Redirects to home page
-    header('Location: index.html');
+    //Redirects to success page
+    header('Location: ProfileEditSuccess.html');
     exit;
     }
     //if there is an issue updating the DB, the catch block will execute an error statement
