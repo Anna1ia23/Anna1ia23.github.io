@@ -38,12 +38,12 @@
             <!-- ignore this error message i had to do some funky stuff but its working -->
             <p>Enter in search terms here, each new term separated by a comma<br>‎ </p>
 
-            <input type="searchBar" id="searchBarTXT" class="search__input" autofocus placeholder="Enter Text...">
+            <input type="searchBar" id="searchBarTXT" name ="searchBarTxt"class="search__input" autofocus placeholder="Enter Text...">
 
              <!--A.S. updated the button to send the text in the search bar to the php file called searchResults. This
                 file will use the input to search the database and return users who have info that contains that keyword
                 AT THIS POINT, PHP CAN ONLY HANDLE ONE WORD AT A TIME-->
-            <button class="main__btn"><a href="/searchResults.php?q=[searchBarTXT]">Search</a></button>
+            <button class="main__btn"><a href="/searchResults.php?q=[searchBarTxt]">Search</a></button>
           </div>
         </div>
       </div>
