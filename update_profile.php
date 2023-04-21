@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try{
     //Insert user information into database
-    $sql = "INSERT INTO [dbo].intern_profile (intern_name, instagram_username, linkedin_username, canvas_username) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO [dbo].intern_profile (intern_name, instagram_username, linkedin_username, canvas_username) VALUES ($name, $instagram, $linkedin, $canvas)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$name, $instagram, $linkedin, $canvas]);
 
