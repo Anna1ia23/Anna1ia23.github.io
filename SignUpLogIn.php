@@ -33,7 +33,7 @@
     <!-- Login Section -->
     <div class="login">
     <div class="login__container">
-    <form class="form form--hidden" class="form" id="login">
+    <form class="form form--hidden" class="form" id="login" method="POST" action="logInBackEnd.php">
         <h1 class="form__title">Login</h1>
         <div class="form__message form__message--error"></div>
         <div class="form__input--group">
@@ -48,58 +48,12 @@
         <input type="checkbox" id="logInCheckbox" name="logInCheckbox" value="Business" class="form__input">
         <label for="logInCheckbox"> Are you a business?</label><br>
 
-        <button class="form__button" type="submit" onclick="auth()" >Continue</button>
+        <button class="form__button" type="submit">Continue</button>
         <p class="form__text">
             <a class="form__link" id="linkCreateAccount" >Don't have an account? Sign up!</a>
         </p>
-        <script>
-               function auth() {
-                var email = document.getElementById("userLogInEmail").value;
-                var password = document.getElementById("userLogInPass").value;
-
-                <?php
-                    include_once'FALC/connectionScript.php';
-
-                    //input from user should be saved to a username and password variable. These are example variables in php
-                    //but I think you can use javascript to fill them.
-                    $username = $_POST['email'];
-                    $password = $_POST['password'];
-
-
-
-                    //this is the sql statement that will check if there is a record with both username and password
-                    $sql="SELECT * FROM user_login WHERE username='$givenUsername' AND password='$givenPassword';";
-
-                    //This executes the above statement and saves it into a 'result' variable:
-                    $result=$conn->query($sql);
-
-                    //this will check if there is a match:
-                    if($result->num_rows >0){
-                        echo "Access granted. ";
-                        header('Location: /Search.html');
-                        exit;
-                        //THIS IS WHERE THEY SHOULD BE ALLOWED ACCESS TO THEIR ACCOUNT/SEARCH PAGE
-                    }
-                    else{
-                         echo "Invalid username or password. Please try again. If new user, please sign up.";
-                         header('Location: /SignUpLogIn.php');
-                         exit;
-                     }
-
-                ?>
-
-                /*need to check the database...dont know how but will try to find it out
-                if (email == "companyexample" && password == "password123!") {
-                    window.location.assign("Search.html");
-                    alert("Login successful ");
-                }
-                else {
-                    alert("Invalid Information ");
-                    return;
-                }*/
-               }
-        </script>
     </form>
+    
     <!-- Sign Up Section -->
     <form id="createAccount" action="SignUpBackEnd.php" method="post">
         <h1 class="form__title">Sign Up</h1>
@@ -116,26 +70,10 @@
         <input type="checkbox" id="signUpCheckbox" name="signUpCheckbox" value="Business" class="form__input">
         <label for="signUpCheckbox"> Are you a business?</label><br>
 
-        <button class="form__button" type="submit" onclick="input()">Continue</button>
+        <button class="form__button" type="submit" >Continue</button>
         <p class="form__text">
             <a class="form__link" id="linkLogin">Already have an account? Log In!</a>
         </p>
-        <script>
-           /* function input() {
-                var email = document.getElementById("userLogInEmail").value;
-                var password = document.getElementById("userLogInPass").value;
-                //var checkbox = document.getElementById("signUpCheckBox").value; ??
-
-                //send the variables to the DB
-
-                //check if they have an account in the DB
-                //if so, alert and clear the textboxes
-                //if not, save the info in the DB, alert them to the success, then send them to one of the pages
-                window.location.assign("SignUpLogIn.php");
-                alert("Signup Successful ");
-
-            }*/
-        </script>
     </form>
     </div>
     </div>
