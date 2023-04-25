@@ -21,7 +21,7 @@
     }
     else{
          echo "Invalid username or password. Please try again. If new user, please sign up.";
-         header('Location: /SignUpLogIn.html');
+         header('Location: /SignUpLogIn.php');
          exit;
      }
 

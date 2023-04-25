@@ -17,7 +17,7 @@
     //this will check if there is a match:
     if($result->num_rows >0){
         echo "This email is already in use, please retry your sign-up.login if you have an account already. ";
-        header('Location: /SignUpLogIn.html');
+        header('Location: /SignUpLogIn.php');
         exit;
 
     }

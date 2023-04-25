@@ -100,7 +100,7 @@
                 //check if they have an account in the DB
                 //if so, alert and clear the textboxes
                 //if not, save the info in the DB, alert them to the success, then send them to one of the pages
-                window.location.assign("SignUpLogIn.html");
+                window.location.assign("SignUpLogIn.php");
                 alert("Signup Successful ");
 
             }*/

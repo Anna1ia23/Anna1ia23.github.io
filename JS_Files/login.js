@@ -21,7 +21,7 @@ function allowAccessToWebsite(checked){
     if (checked === true) {
         location.href = "/Search.html";
     } else {
-        location.href = "/EditProfile.html";
+        location.href = "/EditProfile.php";
     }
 }
 
