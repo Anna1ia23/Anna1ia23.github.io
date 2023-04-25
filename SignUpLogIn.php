@@ -57,7 +57,38 @@
                 var email = document.getElementById("userLogInEmail").value;
                 var password = document.getElementById("userLogInPass").value;
 
-                //need to check the database...dont know how but will try to find it out
+                <?php
+                    include_once'FALC/connectionScript.php';
+
+                    //input from user should be saved to a username and password variable. These are example variables in php
+                    //but I think you can use javascript to fill them.
+                    $username = $_POST['email']
+                    $password = $_POST['password']
+
+
+
+                    //this is the sql statement that will check if there is a record with both username and password
+                    $sql="SELECT * FROM user_login WHERE username='$givenUsername' AND password='$givenPassword';"
+
+                    //This executes the above statement and saves it into a 'result' variable:
+                    $result=$conn->query($sql);
+
+                    //this will check if there is a match:
+                    if($result->num_rows >0){
+                        echo "Access granted. ";
+                        header('Location: /Search.html');
+                        exit;
+                        //THIS IS WHERE THEY SHOULD BE ALLOWED ACCESS TO THEIR ACCOUNT/SEARCH PAGE
+                    }
+                    else{
+                         echo "Invalid username or password. Please try again. If new user, please sign up.";
+                         header('Location: /SignUpLogIn.php');
+                         exit;
+                     }
+
+                ?>
+
+                /*need to check the database...dont know how but will try to find it out
                 if (email == "companyexample" && password == "password123!") {
                     window.location.assign("Search.html");
                     alert("Login successful ");
@@ -65,8 +96,8 @@
                 else {
                     alert("Invalid Information ");
                     return;
-                }
-            }
+                }*/
+               }
         </script>
     </form>
     <!-- Sign Up Section -->
