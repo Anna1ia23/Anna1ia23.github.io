@@ -52,6 +52,6 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 
 // Step 7: Redirect the user to the search results page
-header('Location: /Results.html');
+header('Location: /Results.php');
 exit;
 ?>

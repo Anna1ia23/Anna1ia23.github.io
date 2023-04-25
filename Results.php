@@ -42,27 +42,20 @@
                 <div class="candidate__information">
                     
                     <!--PHP code below! Katie- can this be cleaned up to fit with the rest of the site?-->
-                    <!--
-                //<?php
-                   <!--starts the session previously ended in searchResults.php-->
-                    //session_start();
-
-                   <!--Displays the search results in a table: notice the tags, i believe they can be modified w/ classes/id's for styling'-->
-                    //if (isset($_SESSION['search_results']) && count($_SESSION['search_results']) > 0) {
-                        //echo "<table>";
-                        //echo "<tr><th>Intern Name</th><th>Instagram Account</th><th>LinkedIn Account</th><th>Canvas Account</th></tr>";
-                        //foreach ($_SESSION['search_results'] as $result) {
-                            //echo "<tr><td>" . $result['intern_name'] . "</td><td>" . $result['instagram_username'] . "</td><td>" . $result['linkedin_username'] . "</td><td>" . $result['canvas_username'] . "</td></tr>";
-                        //}
-                        //echo "</table>";
-                    //} else {
-                    //echo "No results found.";
-                     // }
-
-                    <!--Clear the session variable-->
+                <?php
+                    session_start();
+                    if (isset($_SESSION['search_results']) && count($_SESSION['search_results']) > 0) {
+                        echo "<table>";
+                        echo "<tr><th>Intern Name</th><th>Instagram Account</th><th>LinkedIn Account</th><th>Canvas Account</th></tr>";
+                        foreach ($_SESSION['search_results'] as $result) {
+                            echo "<tr><td>" . $result['intern_name'] . "</td><td>" . $result['instagram_username'] . "</td><td>" . $result['linkedin_username'] . "</td><td>" . $result['canvas_username'] . "</td></tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                    echo "No results found.";
+                     }
                     unset($_SESSION['search_results']);
-                //?>
-                    --!>
+                ?>
                     
                     <c class="candidate__name" id="candidate__name">Name<br><br></c>
                     <linkTXT class="candidate__instagram" id="candidate__instagram" href="/">Instagram:<br>‎ </linkTXT>

@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
         //if they are, go to results page. if not, idk do something
         if (keywordsFound = true) {
             //go to the results page
-            location.href = "/Results.html";
+            location.href = "/Results.php";
         }
         else {
-            location.href = "/NoResults.html";
+            location.href = "/NoResults.php";
             //still send them to the results page and give them nothing? or make an error right here?
         }
     });
