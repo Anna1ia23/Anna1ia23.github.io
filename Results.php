@@ -38,35 +38,40 @@
             <!-- This is the part that will display if an error has occured (e.g. no users found) -->
             <div class="form__message form__message--error"></div>
             <!-- This is the part that holds candidate information -->
-            <div class="candidate">
-                <div class="candidate__information">
-                    
                     <!--PHP code below! Katie- can this be cleaned up to fit with the rest of the site?-->
                 <?php
                     session_start();
                     if (isset($_SESSION['search_results']) && count($_SESSION['search_results']) > 0) {
                         echo "<table>";
                         echo "<tr><th>Intern Name</th><th>Instagram Account</th><th>LinkedIn Account</th><th>Canvas Account</th></tr>";
-                        foreach ($_SESSION['search_results'] as $result) {
-                            echo "<tr><td>" . $result['intern_name'] . "</td><td>" . $result['instagram_username'] . "</td><td>" . $result['linkedin_username'] . "</td><td>" . $result['canvas_username'] . "</td></tr>";
-                        }
+                        foreach ($_SESSION['search_results'] as $result) { ?>
+                            <div class="candidate">
+                                <div class="candidate__information">
+                                    <?php
+                                        echo '<c class="candidate__name" id="candidate__name">Name: ' . $result['intern_name'] . '<br><br></c>';
+                                        echo '<linkTXT class="candidate__instagram" id="candidate__instagram" href="/">Instagram:' . $result['instagram_username'] . '<br>‎ </linkTXT>';
+                                        echo '<linkTXT class="candidate__linkedin" id="candidate__linkedin" href="/">LinkedIn:' . $result['linkedin_username'] . '<br>‎ </linkTXT>';
+                                        echo '<linkTXT class="candidate__canvas" id="candidate__canvas" href="/">Canvas:' . $result['canvas_username'] . '<br>‎ </linkTXT>';
+                                    ?>
+                                </div>
+                                <div class="candidate__img--container">
+                                    <img id="candidate__img" src="images/miscPFP_Image.svg" />
+                                </div>
+                            </div>
+                                <?php
+                            // old code
+                            //echo "<tr><td>" . $result['intern_name'] . "</td><td>" . $result['instagram_username'] . "</td><td>" . $result['linkedin_username'] . "</td><td>" . $result['canvas_username'] . "</td></tr>";
+                            }
                         echo "</table>";
                     } else {
-                    echo "No results found.";
-                     }
+                        //old code
+                        //echo "No results found.";
+                        ?>
+                        <meta http-equiv="refresh" content="10; URL=http://falc-mcs2513.com/NoResults.html" />
+                        <?php
+                    }
                     unset($_SESSION['search_results']);
                 ?>
-                    
-                    <c class="candidate__name" id="candidate__name">Name<br><br></c>
-                    <linkTXT class="candidate__instagram" id="candidate__instagram" href="/">Instagram:<br>‎ </linkTXT>
-                    <linkTXT class="candidate__linkedin" id="candidate__linkedin" href="/">LinkedIn:<br>‎ </linkTXT>
-                    <linkTXT class="candidate__canvas" id="candidate__canvas" href="/">Canvas:<br>‎ </linkTXT>
-                </div>
-                <div class="candidate__img--container">
-                    <img id="candidate__img" src="images/miscPFP_Image.svg" />
-                </div>
-            </div>
-    
             <!-- Fix Later -->
             <a href="/Search.html" class="button">Back</a>
         </form>
