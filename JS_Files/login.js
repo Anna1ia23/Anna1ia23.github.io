@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.add("form--hidden");
         createAccountForm.classList.remove("form--hidden");
     });
-    loginForm.addEventListener("submit", e => {
+    /*loginForm.addEventListener("submit", e => {
         e.preventDefault();
         let username = document.getElementById('userLogInEmail').value;
         let password = document.getElementById('userLogInPass').value;
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setFormMessage(loginForm, "error", "Please enter a username and password.");
         }
         
-    });
+    }); */
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         // when the user clicks off of an input field, this checks if they entered valid input
