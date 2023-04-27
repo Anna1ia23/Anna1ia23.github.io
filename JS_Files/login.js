@@ -16,14 +16,14 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
 
-function allowAccessToWebsite(checked){
+/*function allowAccessToWebsite(checked){
     // if checked, the user is a business
     if (checked === true) {
         location.href = "/Search.html";
     } else {
         location.href = "/EditProfile.php";
     }
-}
+}*/
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.add("form--hidden");
         createAccountForm.classList.remove("form--hidden");
     });
-    /*loginForm.addEventListener("submit", e => {
+    loginForm.addEventListener("submit", e => {
         e.preventDefault();
         let username = document.getElementById('userLogInEmail').value;
         let password = document.getElementById('userLogInPass').value;
@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (username && password){
 
             // begin searching the database right HERE!!
-
+            location.href = "/PHP_Files/LogInBackEnd.php";
             // if there is a match, run this function:
-            allowAccessToWebsite(document.getElementById('logInCheckbox').checked);
+            //allowAccessToWebsite(document.getElementById('logInCheckbox').checked);
 
             // if there isn't a match, display this message:
             // setFormMessage(loginForm, "error", "Incorrect username or password.");
@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // begin searching the database right HERE!!
             // only check usernames
-
+            location.href = "/PHP_Files/LogInBackEnd.php";
             // if there isn't a match, save their data in the database and then run this function:
-            allowAccessToWebsite(document.getElementById('signUpCheckbox').checked);
+            // allowAccessToWebsite(document.getElementById('signUpCheckbox').checked);
 
             // if there is a match, then display this message:
             // setFormMessage(loginForm, "error", "Username has been taken.");
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setFormMessage(loginForm, "error", "Please enter a username and password.");
         }
         
-    }); */
+    });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         // when the user clicks off of an input field, this checks if they entered valid input
