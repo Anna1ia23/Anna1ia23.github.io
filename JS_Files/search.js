@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#SignUpSubmitButton");
     loginForm.addEventListener("submit", e => {
         //store user's searched terms in a const/global variable?
@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         var keywordsFound = false;
 
         //have something to search the array
-        for (/*make it so it reads the whole array in search for a keyword*/) {
-            if (/*The id's keywords match the inputted keywords*/) {
+        for () {
+            if () {
                 //store the ID
                 keywordsFound = true
             }
@@ -35,4 +35,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-});
+});*/
