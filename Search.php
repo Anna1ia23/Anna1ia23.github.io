@@ -44,7 +44,7 @@
              <!--A.S. updated the button to send the text in the search bar to the php file called searchResults. This
                 file will use the input to search the database and return users who have info that contains that keyword
                 AT THIS POINT, PHP CAN ONLY HANDLE ONE WORD AT A TIME-->
-            <button class="main__btn"> type="submit">Search</button>
+            <button class="main__btn" type="submit">Search</button>
           </div>
         </div>
       </div>
