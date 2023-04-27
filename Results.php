@@ -42,8 +42,6 @@
                 <?php
                     session_start();
                     if (isset($_SESSION['search_results']) && count($_SESSION['search_results']) > 0) {
-                        echo "<table>";
-                        echo "<tr><th>Intern Name</th><th>Instagram Account</th><th>LinkedIn Account</th><th>Canvas Account</th></tr>";
                         foreach ($_SESSION['search_results'] as $result) { ?>
                             <div class="candidate">
                                 <div class="candidate__information">
@@ -66,6 +64,7 @@
                     } else {
                         //old code
                         //echo "No results found.";
+                        // change the content of the code below to change the reload time; i just made it a small number so we can see whats happening
                         ?>
                         <meta http-equiv="refresh" content="10; URL=http://falc-mcs2513.com/NoResults.html" />
                         <?php
