@@ -29,7 +29,7 @@
        if(&myBool = true)
        {
            echo "Access granted. ";
-           header('Location: /Search.html');
+           header('Location: /Search.php');
            exit;
        }
        else

@@ -26,7 +26,7 @@
         VALUES ('$username', '$password');';
 
         echo "Sign-up Complete, please log in.";
-        header('Location: /SignUpLogIn');
+        header('Location: /Search.php');
         exit;   
     }
 
